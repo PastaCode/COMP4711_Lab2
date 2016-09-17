@@ -4,4 +4,6 @@ Team members:
 
 Changelog:
 
-file initialized - 3:02PM
+added a new avatar image with a new quote - 7:30PM 09/16/2016
+
+file initialized - 3:02PM 09/16/2016
