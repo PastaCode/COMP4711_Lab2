@@ -23,13 +23,14 @@ class Welcome extends Application
 		$authors = array ();
 		foreach ($source as $record)
 		{
-			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
+			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where'], 
+                            'what' => $record['what']);
 		}
 		$this->data['authors'] = $authors;
 
 		$this->render();
 	}
-        public function random(){
+	public function random(){
         
             // this is the view we want shown
 		$this->data['pagebody'] = 'homepage';
@@ -42,10 +43,8 @@ class Welcome extends Application
 			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
 		}
                 $random = array_rand($authors);
-		$this->data['authors'] = array_slice($random, 5,1);
+		$this->data['authors'] = array_slice($authors, $random,1);
 		$this->render();
             
-        }
-            
-
+    }
 }
